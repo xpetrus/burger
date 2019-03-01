@@ -1,0 +1,44 @@
+<div class = "container">
+    <div class ="row" align = "center">
+        <h1>I Feel Like Eating Burgers Today...</h1>
+    </div>
+    <div class = "row">
+        <div class = "col-md-6">
+            <div class = "undevoured">
+                <h4>Burgers:</h4>
+                <ul>
+                    {{#each burger}}
+                        {{#unless devoured}}
+                            {{> burger/burger-block eat = true}}
+                        {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+
+        <div class = "col-md-6">
+            <div class = "devoured">
+                <h4>Devoured:</h4>
+                <ul>
+                    {{#each burger}}
+                        {{#if devoured}}
+                            {{>burger/burger-block eat=false}}
+                        {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class = "row" align = "center">
+        
+        <form class = "add-burger">
+            <div class = "form-group">
+                <label for="burgerfield">Enter Burger: </label>
+                <input type = "text" id="burgerfield">
+            </div>
+            <p>Enter a burger you want to eat, then hit submit!</p>
+            <button type = "submit" class = "btn btn-primary">Submit</button>
+        </form>
+
+    </div>
+</div>
