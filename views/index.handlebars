@@ -1,10 +1,11 @@
 <div class = "container">
     <div class ="row" align = "center">
+        <img src="assets/img/bburger.png" width="25%" height="25%" id = "bburger">
         <h1>I Feel Like Eating Burgers Today...</h1>
     </div>
     <div class = "row">
         <div class = "col-md-6">
-            <div class = "undevoured">
+            <div class = "undevoured" align = "right">
                 <h4>Burgers:</h4>
                 <ul>
                     {{#each burger}}
@@ -17,7 +18,7 @@
         </div>
 
         <div class = "col-md-6">
-            <div class = "devoured">
+            <div class = "devoured" >
                 <h4>Devoured:</h4>
                 <ul>
                     {{#each burger}}
@@ -33,11 +34,11 @@
         
         <form class = "add-burger">
             <div class = "form-group">
-                <label for="burgerfield">Enter Burger: </label>
-                <input type = "text" id="burgerfield">
+                
+                <input type = "text" class = "form-control" id="burgerfield">
             </div>
-            <p>Enter a burger you want to eat, then hit submit!</p>
-            <button type = "submit" class = "btn btn-primary">Submit</button>
+            <h4><strong>Enter a burger you want to eat, then hit submit!</strong></h4>
+            <button type = "submit" class = "btn btn-primary btn-lg">Submit</button>
         </form>
 
     </div>
