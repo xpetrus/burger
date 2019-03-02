@@ -31,18 +31,18 @@ var orm = {
     },
 
     insertOne: function(table, col, val, cb){
-        var queryString = "INSERT INTO" + table; //forming sql query
+        var queryString = "INSERT INTO " + table; //forming sql query
         queryString +=" (";
         queryString += col.toString();
         queryString +=") ";
-        queryString +="VALUES (?)";
+        queryString +="VALUES (?,?)";
 
         console.log(queryString);
         connection.query(queryString, val, function(err, result){
             if(err){
                 throw err;
             }
-            cb(results);
+            cb(result);
         });
     },
 

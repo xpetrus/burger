@@ -20,10 +20,11 @@ $(function(){
 
     $(".add-burger").on("submit", function(event){
         event.preventDefault();
+        console.log("clicked submit");
 
         var newBurger = {
-            burger_name: ("#burgerfield").valueOf().trim(),
-            devoured: false
+            burger_name: $("#burgerfield").val().trim(),
+            
         };
 
         $.ajax("/api/burger", {
