@@ -12,4 +12,5 @@ Handlebar's templating technology allow for some neat html manipulation.
 * MySQL
 * Handlebars.js
 <br>
-### Link: https://guarded-badlands-70104.herokuapp.com/
+### Link: 
+https://guarded-badlands-70104.herokuapp.com/
